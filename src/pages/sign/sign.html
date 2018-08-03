@@ -1,0 +1,50 @@
+
+
+<ion-content class="main"padding>
+<!-- Input fields -->
+  <ion-list text>
+
+
+    <h1 text-center>Sign in</h1>
+
+<!--  -->
+<ion-item class="password">
+    <ion-label clearInput color="light">  Username</ion-label>
+    <ion-input type="text"></ion-input>
+</ion-item> <br>
+
+
+<!--  -->
+<ion-item class="password">
+    <ion-label color="light"> Password</ion-label>
+    <ion-input type="password"></ion-input>
+</ion-item>
+
+  </ion-list>
+
+<!--  LOGIN Button -->
+
+  <ion-grid no-padding >
+      <div class = "row" text-center>
+          <div class = "col"> 
+                <button ion-button full color="login" (click)="next()"> 
+                <ion-icon name="md-checkmark" color="light">   Login</ion-icon>
+                 </button>
+          </div>
+      </div>
+    </ion-grid>
+
+
+
+  <div class="signText" text-center>
+  <p>Forgot Password?</p> <br>
+  <p>Or Log In with</p>
+  </div>
+
+  <ion-grid no-padding >
+  <div class = "row" text-center>
+      <div class = "col"> <button ion-button full> <ion-icon name="logo-facebook">   Facebook</ion-icon> </button></div>
+      <div class = "col"><button ion-button full color="twitter"> <ion-icon name="logo-twitter">   Twitter</ion-icon> </button></div>
+  </div>
+</ion-grid>
+</ion-content>
