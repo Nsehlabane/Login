@@ -1,18 +1,37 @@
-<!--
-  Generated template for the InformationPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>information</ion-title>
   </ion-navbar>
+<form>
+  
+</form>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="main" padding>
+<ion-list *ngFor="let detail of details;let i=index">
+    <ion-item class="view">
+
+        <ion-thumbnail >
+            <img src="../assets/imgs/{{detail.pic}}">
+        
+        </ion-thumbnail>
+        
+        <h2> Name: {{detail.name}}</h2>
+        <h2>Surname: {{detail.surname}}</h2>
+        <h2>Age: {{detail.age}}</h2>
+        <h2>Position: {{detail.position}}</h2>
+        <h2>Department: {{detail.department}}</h2>
+       
+
+        <button ion-button full color="login"(click)="ok()">Ok</button>
+
+      </ion-item>
+       
+  </ion-list>
+     
 
 </ion-content>

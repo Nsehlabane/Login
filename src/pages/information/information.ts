@@ -1,12 +1,8 @@
+import { HomePage } from './../home/home';
+import { service } from './../../Services/services';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the InformationPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +11,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InformationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  details=[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private service:service) {
+
+    this.details=this.service.getDetails();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InformationPage');
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad InformationPage');
+  // }
+ 
+
+  ok(){
+    this.service.details=[];
+    this.navCtrl.push(HomePage)
   }
 
 }

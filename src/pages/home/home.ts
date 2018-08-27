@@ -1,3 +1,4 @@
+import { service } from './../../Services/services';
 import { InformationPage } from './../information/information';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -8,10 +9,14 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+codetribers=[];
 
+  constructor(public navCtrl: NavController, private service:service) {
+this.codetribers=this.service. getCodetribers();
   }
-  next2():void{
-    this.navCtrl.push(InformationPage);
-    }
+
+  getProfile(index:number){
+      this.service.addDetails(index);
+      this.navCtrl.push(InformationPage)
+     }
 }

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,41 +7,30 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <!-- <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div> -->
+<ion-content class="main">
+ 
 
 
-  <ion-list>
-    <ion-item>
+  <ion-list >
+    <ion-item class="list">
       <ion-avatar item-start>
-        <img src="img/avatar-finn.png">
+        <img src="../assets/imgs/55a78667261983.5b3f9c8a8613b.jpg">
       </ion-avatar>
       <h2>Neo Sehlabane</h2>
       <h3>Don't Know What To Do!</h3>
       <p>I've had a pretty messed up day. If we just...</p>
     </ion-item>
 
-    <ion-list>
-      <ion-item>
+   
+      <ion-item class="list">
         <ion-avatar item-start>
-          <img src="img/avatar-finn.png">
+          <img src="../assets/imgs/2b390e67261983.5b3673a5b9ef9.jpg">
         </ion-avatar>
-        <h2>Finn</h2>
-        <h3>Don't Know What To Do!</h3>
-        <p>I've had a pretty messed up day. If we just...</p>
+        <h2>Lwazi Tongo</h2>
+        <h3>Living the life!</h3>
+        <p>I'm awesome and you know it.</p>
       </ion-item>
-    </ion-list>
+    
     
   </ion-list>
 </ion-content>

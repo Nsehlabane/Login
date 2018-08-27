@@ -10,6 +10,7 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SignPage } from '../pages/sign/sign';
+import { service } from '../Services/services';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { SignPage } from '../pages/sign/sign';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +35,9 @@ import { SignPage } from '../pages/sign/sign';
   providers: [
     StatusBar,
     SplashScreen,
+    service,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+
   ]
 })
 export class AppModule {}
